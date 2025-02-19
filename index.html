@@ -6,18 +6,19 @@
       body {
         font-family: sans-seri;
         margin: 10px;
-        display: flex;
-        flex-direction: column;
       }
 
       .header {
-        text-align: center;
+        display: flex;
+        justify-content: space-between
       }
 
       .main-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start
+        display: grid;
+        grid-template-columns: 30% 30% 40%;
+      }
+      .headimg{
+        
       }
 
       h1 {
@@ -25,6 +26,7 @@
         font-size: 150px;
         font-family: sans-seri;
         color: #222B35;
+        margin-bottom: -100px
       }
 
       h5 {
@@ -36,9 +38,7 @@
       .grid-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        grid-gap: 20px;
-
+        grid-gap: 2px;
       }
 
       .grid-item {
@@ -47,9 +47,6 @@
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         transition: transform 0.2s ease;
         margin: 10px;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 5px;
-        justify-content: space-around
       }
 
       .grid-item:hover {
@@ -60,7 +57,6 @@
       .grid-item img {
         width: calc(20vw - 10px);
         height: calc(20vw - 10px);
-        display: grid;
       }
 
       .caption {
@@ -71,18 +67,17 @@
       }
 
       .left-img {
-        width: 10px;
-        height: auto;
-        display: block;
-        flex: 2;
-        object-fit: cover;
+        background-image: url("https://i.pinimg.com/736x/df/ad/e7/dfade7408ffb740c38caa8b86c36930c.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 100%
       }
 
       .right-column {
-        width: 10px;
         text-align: right;
-        flex: 1;
-        font-size: 25px
+        font-size: 25px;
+        margin-left: 10px
       }
 
 
@@ -105,47 +100,36 @@
     <div class="header">
       <h5>OLUWALONIMI VOL. 1</h5>
       <h5>FEBRUARY 2025</h5>
-      <h1>OLUALAKIJA</h1>
     </div>
 
-    <center>
+    <h1>OLUALAKIJA</h1>
 
-      <img src="https://i.pinimg.com/736x/b5/a3/17/b5a3173f331b214178ae0fd11a28d069.jpg" 
-           alt="Oluwalonimi OluAlakija"
-            style="width: 1000px; height: 500px;">
 
-      <p>
-        In the heart of the University of Chicago, amidst the rigorous pursuit of knowledge and intellectual curiosity, a rising star is making her mark in the world of fashion and media. 
-      </p>
-      <p>
-        Meet Oluwalonimi OluAlakija, a junior whose passion for luxury and storytelling is setting her on a path to success.</p>
+    <img class="headimg" src="https://i.pinimg.com/736x/b5/a3/17/b5a3173f331b214178ae0fd11a28d069.jpg" alt="Oluwalonimi OluAlakija">
 
-    </center>
+    <p>
+      In the heart of the University of Chicago, amidst the rigorous pursuit of knowledge and intellectual curiosity, a rising star is making her mark in the world of fashion and media.
+    </p>
+    <p>
+      Meet Oluwalonimi OluAlakija, a junior whose passion for luxury and storytelling is setting her on a path to success.</p>
 
-    <hr>
 
     <div class="main-content">
-      <div class="right-column">
-        <p>With her unique blend of academic prowess, practical experience, and unwavering passion, Oluwalonimi OluAlakija is a force to be reckoned with. As she continues her journey at the University of Chicago, she is poised to make a significant impact on the world of fashion and media. Keep an eye on this rising star, for her future is undoubtedly bright.</p>
-      </div>
 
       <div class="left-img">
-        <img src="https://i.pinimg.com/736x/df/ad/e7/dfade7408ffb740c38caa8b86c36930c.jpg" alt="Oluwalonimi Image">
       </div>
-    </div>
 
-    <center>
       <div class="grid-container">
         <div class="grid-item">
           <a href="https://www.goodreads.com/user/show/68752214-oluwalonimi-olualakija" target="_blank">
-          <img src="https://i.pinimg.com/736x/0c/82/23/0c8223bee617b3d39feca17b5f34ffd8.jpg" alt="Image 1">
-          <div class="caption">reading</div>
+            <img src="https://i.pinimg.com/736x/0c/82/23/0c8223bee617b3d39feca17b5f34ffd8.jpg" alt="Image 1">
+            <div class="caption">reading</div>
           </a>
         </div>
         <div class="grid-item">
           <a href="https://open.spotify.com/album/2ODvWsOgouMbaA5xf0RkJe?si=_6xVGnU9SqawkeTP3fi2HA" target="_blank">
-          <img src="https://i.pinimg.com/736x/87/89/5d/87895d05055f6030ee798409821e58ce.jpg" alt="Image 2">
-          <div class="caption">listening</div>
+            <img src="https://i.pinimg.com/736x/87/89/5d/87895d05055f6030ee798409821e58ce.jpg" alt="Image 2">
+            <div class="caption">listening</div>
           </a>
         </div>
         <div class="grid-item">
@@ -166,20 +150,28 @@
           <div class="caption">Image 6 caption</div>
         </div>
       </div>
-    </center>
-     <div class="grid-container">
-       <div class="gridimg">
-         
-    <div class="contact-info">
-      <p>Oluwalonimi OluAlakija</p>
-      <p>+123-456-7890</p>
-      <p>@joinaquarius</p>
+
+      <div class="right-column">
+        <p>With her unique blend of academic prowess, practical experience, and unwavering passion, Oluwalonimi OluAlakija is a force to be reckoned with. As she continues her journey at the University of Chicago, she is poised to make a significant impact on the world of fashion and media. Keep an eye on this rising star, for her future is undoubtedly bright.</p>
+      </div>
     </div>
 
-    <hr>
 
-    <div class="footer">
-      <p>00035 545620</p>
+    <div class="grid-container">
+      <div class="gridimg">
+
+        <div class="contact-info">
+          <p>Oluwalonimi OluAlakija</p>
+          <p>+123-456-7890</p>
+          <p>@joinaquarius</p>
+        </div>
+
+        <hr>
+
+        <div class="footer">
+          <p>00035 545620</p>
+        </div>
+      </div>
     </div>
 
   </body>
